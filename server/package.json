@@ -28,7 +28,7 @@
     "apollo-boost": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.3",
     "apollo-link-http": "^1.5.16",
-    "apollo-server": "^2.4.8",
+    "apollo-server": "^2.25.3",
     "csv-parse": "^4.6.3",
     "dotenv": "^6.2.0",
     "fs": "^0.0.1-security",
