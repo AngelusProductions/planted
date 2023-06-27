@@ -1,10 +1,10 @@
 .navLinksContainer {
-  padding-left: 151px;
   display: flex;
-  justify-content: space-between;
-  width: 367px;
+  justify-content: space-around;
+  width: 100%;
   font-family: 'Karla', sans-serif;
-  font-size: 20.5px;
+  font-size: 1.4vw;
+  grid-column: 2;
 }
 
 .navLink,
@@ -12,6 +12,19 @@
   padding-top: 5px;
   color: rgba(33, 33, 33, 0.9);
 }
+
 .navLinkSelected {
   font-weight: bold;
+  transform: scale(1.1);
+}
+
+.navLink:hover,
+.navLinkSelected:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.navLink:active,
+.navLinkSelected:active {
+  transform: scale(0.9);
 }

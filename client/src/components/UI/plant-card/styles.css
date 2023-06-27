@@ -26,6 +26,15 @@
   text-align: center;
 }
 
+.plantName:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.plantName:active {
+  transform: scale(0.8);
+}
+
 .plantPic {
   width: 251px;
 }

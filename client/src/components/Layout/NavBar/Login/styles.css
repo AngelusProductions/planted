@@ -1,10 +1,6 @@
 .loginContainer {
-  margin-left: 67px;
-  margin-right: 36px;
-}
-
-.loginContainer {
-  display: inline-flex;
+  grid-column: 4;
+  justify-self: center;
 }
 
 .googleButton {
@@ -18,19 +14,30 @@
   font-size: 1.3rem !important;
   font-weight: 700 !important;
   padding: 0.4rem 3.2rem !important;
+  min-width: 11rem;
+  margin: 0 2rem;
 }
+
 .googleButton:hover {
   background: black !important;
   color: white !important;
   cursor: pointer !important;
+  transform: scale(1.1);
 }
+
+.googleButton:active {
+  transform: scale(0.9);
+}
+
 .googleButton:active,
 .googleButton:focus {
   outline: none !important;
 }
+
 .googleButton > div {
   display: none !important;
 }
+
 .googleButton > span {
   font-weight: bold !important;
 }

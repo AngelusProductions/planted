@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import styles from './styles.css';
-import { WishlistItem } from '../WishListItem';
+import { WishlistItem } from 'components/plant-page/WishlistItem';
 import { arrowConnecting, exit } from 'assets/icons';
 import CREATE_WISH from 'api/mutations/createWish';
 import currentUser from 'utils/currentUser';

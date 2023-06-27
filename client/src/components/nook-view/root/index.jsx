@@ -5,6 +5,7 @@ import { NookPlants } from '../NookPlants';
 import { SuggestionsList } from '../SuggestionsList';
 import { WishlistCarousel } from '../WishlistCarousel';
 import fetchNook from 'api/queries/fetchNook';
+import { CircleLoader } from 'react-spinners';
 
 export const nookDetailText = {
   loadingText: 'Loading...',
@@ -20,7 +21,12 @@ export const NookDetail = props => {
   const { loadingText, errorText } = nookDetailText;
 
   const { loading, error, data } = fetchNook(nookId);
-  if (loading) return loadingText;
+  if (loading)
+    return (
+      <span className={styles.loading}>
+        <CircleLoader color={'#ffc32d'} loading={true} />
+      </span>
+    );
   if (error) return errorText + error.message;
   const { nook } = data,
     { name, luxLevel, wishes } = nook;

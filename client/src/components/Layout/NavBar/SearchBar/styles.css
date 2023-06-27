@@ -1,18 +1,29 @@
+.searchForm {
+  grid-column: 3;
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+
 .searchInput {
   border: none;
   border-radius: 4px;
   font-family: FontAwesome, 'Karla', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.1vw;
+  grid-column: 3;
   padding: 0.7rem;
-  width: 278px;
+  width: 50%;
 }
+
 .searchInput:focus {
-  width: 568px;
+  width: 100%;
 }
+
 .searchInput::placeholder {
   color: #7a7a7a;
   margin-left: 1rem;
 }
+
 .searchInput:focus::placeholder {
   filter: brightness(1.7);
 }

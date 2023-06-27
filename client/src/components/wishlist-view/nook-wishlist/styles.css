@@ -1,4 +1,19 @@
 .gridContainer {
   margin-left: 145px;
   margin-bottom: 135px;
+  animation: fadein 1s ease-out;
+}
+
+.subHeader {
+  animation: fadein 1.5s ease-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

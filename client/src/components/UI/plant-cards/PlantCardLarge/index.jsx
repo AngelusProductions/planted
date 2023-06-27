@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import getLuxOrCycleIcon from 'utils/getLuxOrCycleIcon';
-import {
+import styles, {
   plantCardLarge,
   plantCardLargePhoto,
   plantCardLargeLuxLevel,
@@ -32,7 +32,7 @@ const PlantCardLarge = ({
       onMouseLeave={() => setPlantTypePhotoUrl(photoUrlVerticalCrop)}
     >
       <img src={plantTypePhotoUrl} alt={name} className={plantCardLargePhoto} />
-      {name}
+      <span className={styles.label}>{name}</span>
       {luxIcon}
     </Link>
   );

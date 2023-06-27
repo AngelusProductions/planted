@@ -2,7 +2,9 @@
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 3rem 5rem 0 5rem;
+  margin-top: 2rem;
+  animation: fadein 1s ease-in;
+  width: 100%;
 }
 
 .header {
@@ -13,11 +15,22 @@
   font-size: 2rem;
   margin-top: 2.5rem;
   margin-left: 3rem;
-  text-align: center;
+  animation: fadein 0.5s ease-out;
+  width: 100%;
 }
 
 .greenText {
   color: #00736a;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .plantCardLarge {
@@ -45,4 +58,12 @@
 .plantCardLargeLuxLevel {
   display: block;
   margin: 1rem auto;
+}
+
+.loading {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: scale(13);
+  z-index: -1;
 }

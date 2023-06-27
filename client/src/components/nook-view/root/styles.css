@@ -10,11 +10,13 @@
   height: 32px;
   margin-left: 32px;
   width: 32px;
+  animation: fadein 1.5s ease-in;
 }
 
 .suns {
   height: 21px;
   padding-top: 5px;
+  animation: fadein 1s ease-in;
 }
 
 .title {
@@ -23,4 +25,23 @@
   font-size: 60px;
   justify-content: center;
   margin-top: 45px;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: scale(13);
+  z-index: -1;
 }

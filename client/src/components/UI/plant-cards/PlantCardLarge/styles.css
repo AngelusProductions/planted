@@ -9,7 +9,7 @@
   height: 680px;
   margin-bottom: 3rem;
   min-width: 420px;
-  padding: 1rem;
+  padding-bottom: 1rem;
   text-align: center;
   overflow: hidden;
   width: 29%;
@@ -23,4 +23,14 @@
 .plantCardLargeLuxLevel {
   display: block;
   margin: 1rem auto;
+}
+
+.label:hover {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.label:active {
+  font-size: 0.8rem;
+  cursor: pointer;
 }

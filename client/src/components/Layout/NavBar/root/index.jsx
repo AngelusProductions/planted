@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Login from '../Login';
 import NavLinks from '../NavLinks';
 import SearchBar from '../SearchBar';
-import { rootPath } from 'constants/paths';
+import { rootPath, searchPath } from 'constants/paths';
 import { logoBlack } from 'assets/icons';
 import { navBar, logo, navContentLeft, navContentRight } from './styles.css';
 
@@ -20,7 +20,7 @@ const NavBar = props => {
   const onSearchSubmit = e => {
     e.preventDefault();
     localStorage.setItem('searchString', e.target[0].value);
-    window.location.href = 'http://localhost:8080/search';
+    props.history.push(searchPath);
   };
 
   const baseProps = {
@@ -36,16 +36,12 @@ const NavBar = props => {
 
 const BaseNavBar = props => (
   <nav className={navBar}>
-    <section className={navContentLeft}>
-      <Link to={rootPath}>
-        <img src={logoBlack} alt={navBarText.logo} className={logo} />
-      </Link>
-      <NavLinks {...props} />
-    </section>
-    <section className={navContentRight}>
-      <SearchBar {...props} />
-      <Login {...props} />
-    </section>
+    <Link to={rootPath}>
+      <img src={logoBlack} alt={navBarText.logo} className={logo} />
+    </Link>
+    <NavLinks {...props} />
+    <SearchBar {...props} />
+    <Login {...props} />
   </nav>
 );
-export default NavBar;
+export default withRouter(NavBar);

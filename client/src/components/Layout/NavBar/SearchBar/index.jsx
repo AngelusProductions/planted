@@ -1,8 +1,8 @@
 import React from 'react';
-import { searchInput } from './styles.css';
+import { searchForm, searchInput } from './styles.css';
 
 export default ({ onSearchSubmit }) => (
-  <form onSubmit={onSearchSubmit}>
+  <form className={searchForm} onSubmit={onSearchSubmit}>
     <input
       type="text"
       className={searchInput}

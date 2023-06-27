@@ -16,6 +16,15 @@
   margin-left: 14px;
 }
 
+.nookName:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.nookName:active {
+  transform: scale(0.9);
+}
+
 .smallBox {
   border-style: solid;
   border-width: 2px;

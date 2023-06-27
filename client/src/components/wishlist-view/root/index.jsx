@@ -1,5 +1,6 @@
 import React from 'react';
-import { title, wishlistViewContainer } from './styles.css';
+import { CircleLoader } from 'react-spinners';
+import styles, { title, wishlistViewContainer } from './styles.css';
 import { fetchWishesfromNooksByUser } from 'api/queries/fetchWishesfromNooksByUser';
 import { NookWishlist } from '../nook-wishlist';
 import { SortDropDown } from '../SortDropDown';
@@ -14,9 +15,13 @@ export const WishlistView = () => {
   if (currentUser) userId = currentUser.id;
   else window.location.replace('/');
   const { loading, error, data } = fetchWishesfromNooksByUser(userId);
-  if (loading) return 'Loading...';
+  if (loading)
+    return (
+      <span className={styles.loading}>
+        <CircleLoader color={'#ffc32d'} loading={true} />
+      </span>
+    );
   if (error) return `Error! ${error.message}`;
-
   const { nooks } = data;
   const wishlistNooks = nooks
     ? nooks.filter(nook => nook.wishes.length > 0)

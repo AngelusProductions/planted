@@ -6,25 +6,42 @@
   border-radius: 50%;
   width: 48px;
 }
+
 .userPhoto:hover {
   cursor: pointer;
+  transform: scale(1.1);
+}
+
+.userPhoto:active {
+  transform: scale(0.9);
 }
 
 .logoutButton {
   background: white;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 12px 19px 0 rgba(0, 0, 0, 0.03),
+  box-shadow: 0 12px 19px 0 rgba(0, 0, 0, 0.13),
     0 -12px 19px 0 rgba(0, 0, 0, 0.03);
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   height: 51px;
   position: absolute;
-  right: 42px;
-  top: 69px;
-  width: 130px;
+  right: 20px;
+  top: 93px;
+  width: 147px;
+  z-index: 2;
 }
+
 .logoutButton:hover {
+  background: #212121;
+  box-shadow: 0 12px 19px 0 rgba(0, 0, 0, 0.03),
+    0 -12px 19px 0 rgba(0, 0, 0, 0.03);
   cursor: pointer;
+  transform: scale(1.1);
+  color: white;
+}
+
+.logoutButton:active {
+  transform: scale(0.9);
 }

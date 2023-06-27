@@ -10,6 +10,17 @@
   padding-left: 30px;
   position: relative;
   width: 245px;
+  animation: fadein 2.5s ease-in;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .sortListContainer {
@@ -40,6 +51,16 @@
   border-radius: 4px;
   border: none;
   padding: 0px;
+}
+
+.dropDownButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: invert(1);
+}
+
+.dropDownButton:active {
+  transform: scale(0.9);
 }
 
 .dropDownTitle {

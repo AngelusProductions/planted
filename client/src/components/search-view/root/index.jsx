@@ -1,6 +1,7 @@
 import React from 'react';
+import { CircleLoader } from 'react-spinners';
 import { useQuery } from '@apollo/react-hooks';
-import {
+import styles, {
   searchViewContainer,
   header,
   plantTypeListClass,
@@ -11,7 +12,13 @@ import PlantCardLarge from '../../UI/plant-cards/PlantCardLarge';
 
 const SearchView = () => {
   let headerText = '';
-  const { data } = useQuery(GET_PLANT_TYPES);
+  const { data, loading } = useQuery(GET_PLANT_TYPES);
+  if (loading)
+    return (
+      <span className={styles.loading}>
+        <CircleLoader color={'#ffc32d'} loading={true} />
+      </span>
+    );
   const searchString = localStorage.getItem('searchString');
   const filteredPlantTypes =
     data &&
@@ -25,7 +32,7 @@ const SearchView = () => {
     } for `;
   return (
     <div className={searchViewContainer}>
-      {data && (
+      {data && filteredPlantTypes ? (
         <>
           <h1 className={header}>
             {headerText}
@@ -37,6 +44,8 @@ const SearchView = () => {
             ))}
           </div>
         </>
+      ) : (
+        <h1 className={header}>You searched for nothing. Here is is:</h1>
       )}
     </div>
   );

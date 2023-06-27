@@ -1,34 +1,51 @@
 import React from 'react';
-import * as icons from 'assets/icons';
+import * as i from 'assets/icons';
 
-export default (type, level, selection, className) => {
+export default (
+  type,
+  level,
+  selection,
+  className,
+  onClick = () => {},
+  onHoverChange = () => {},
+) => {
   level = level.toUpperCase();
   const iconDict = {
     luxLevel: {
       unselected: {
-        LOW: icons.luxUnselectedLow,
-        MEDIUM: icons.luxUnselectedMedium,
-        HIGH: icons.luxUnselectedHigh,
+        LOW: i.luxUnselectedLow,
+        MEDIUM: i.luxUnselectedMedium,
+        HIGH: i.luxUnselectedHigh,
       },
       selected: {
-        LOW: icons.luxSelectedLow,
-        MEDIUM: icons.luxSelectedMedium,
-        HIGH: icons.luxSelectedHigh,
+        LOW: i.luxSelectedLow,
+        MEDIUM: i.luxSelectedMedium,
+        HIGH: i.luxSelectedHigh,
       },
     },
     waterCycle: {
       unselected: {
-        LOW: icons.cycleUnselectedLow,
-        MEDIUM: icons.cycleUnselectedMedium,
-        HIGH: icons.cycleUnselectedHigh,
+        LOW: i.cycleUnselectedLow,
+        MEDIUM: i.cycleUnselectedMedium,
+        HIGH: i.cycleUnselectedHigh,
       },
       selected: {
-        LOW: icons.cycleSelectedLow,
-        MEDIUM: icons.cycleSelectedMedium,
-        HIGH: icons.cycleSelectedHigh,
+        LOW: i.cycleSelectedLow,
+        MEDIUM: i.cycleSelectedMedium,
+        HIGH: i.cycleSelectedHigh,
       },
     },
   };
   const icon = iconDict[type][selection][level];
-  return <img src={icon} alt={`${type}:${level}`} className={className} />;
+  return (
+    <img
+      src={icon}
+      id={`${type}:${level}`}
+      alt={`${type}:${level}`}
+      className={className}
+      onClick={onClick}
+      onMouseEnter={onHoverChange}
+      onMouseLeave={onHoverChange}
+    />
+  );
 };

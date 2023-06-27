@@ -29,6 +29,7 @@
   width: 251px;
   transition: all 1.5s ease-in-out;
 }
+
 .plantCardSmallPhoto:hover {
   transform: scale(1.1);
 }

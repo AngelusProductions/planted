@@ -9,6 +9,7 @@
   font-size: 3.6rem;
   margin-top: 2.5rem;
   text-align: center;
+  animation: fadein 0.25s ease-out;
 }
 
 .gardenStats {
@@ -18,6 +19,7 @@
   margin-left: 17.1rem;
   padding-top: 0.5rem;
   text-align: center;
+  animation: fadein 2s ease-in;
 }
 
 .sortSpan {
@@ -33,9 +35,28 @@
   margin-right: 5.2rem;
   padding-top: 0.5rem;
   width: 12rem;
+  animation: fadein 3s ease-in;
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .sortSpan:hover {
   cursor: pointer;
+  color: white;
+  background: #212121;
+  transform: scale(1.1);
+}
+
+.sortSpan:active {
+  transform: scale(0.9);
 }
 
 .alphaSortText {
@@ -48,9 +69,11 @@
   font-size: 1.1rem;
   margin-left: 2rem;
 }
+
 .caretUp {
   transform: rotate(180deg);
 }
+
 .caretDown {
   transform: rotate(360deg);
 }

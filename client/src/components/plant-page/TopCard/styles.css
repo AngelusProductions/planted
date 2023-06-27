@@ -7,6 +7,7 @@
   font-size: 22px;
   margin-top: 20px;
   width: 60%;
+  animation: fadein 2s ease-in;
 }
 
 .header {
@@ -14,6 +15,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  animation: fadein 1s ease-in;
 }
 
 .heartButton {
@@ -21,25 +23,29 @@
   border: none;
   margin-left: 82px;
 }
+
 .heartButton:hover {
   cursor: pointer;
+  transform: scale(1.5);
 }
 
 .indicator {
   height: 32px;
   width: 122px;
+  animation: fadein 1.5s ease-in;
 }
 
 .plantPicture {
   height: 100%;
   max-width: 100%;
+  animation: fadein 2s ease-in;
 }
 
 .plantPictureContainer {
   height: 1000px;
   left: 75%;
   position: absolute;
-  top: -44px;
+  top: -72px;
   width: 850px;
 }
 
@@ -48,6 +54,7 @@
   font-size: 62px;
   margin-bottom: 24px;
   margin-top: 24px;
+  animation: fadein 1s ease-out;
 }
 
 .titleContainer {
@@ -68,4 +75,15 @@
   padding-left: 245px;
   position: relative;
   width: 50%;
+  animation: fadein 2s ease-out;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
