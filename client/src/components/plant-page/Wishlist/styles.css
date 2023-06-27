@@ -1,5 +1,7 @@
 .exit {
   border: none;
+  background: none;
+  transform: translate(35px, -15px) scale(1.5);
 }
 .exit:hover {
   cursor: pointer;
