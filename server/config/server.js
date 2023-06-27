@@ -9,11 +9,8 @@ const schema = fs.readFileSync('./config/schema.graphql');
 const typeDefs = gql`
   ${schema}
 `;
-const claims = {
-  key: 'hVFkk965BuUv'
-};
 
-const token = jwt.sign(claims, process.env.SECRET_KEY, { algorithm: 'HS256' });
+const token = jwt.sign({}, process.env.SECRET_KEY, { algorithm: 'HS256' });
 
 const context = ({ req, res }) => {
   const currentUser = jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
