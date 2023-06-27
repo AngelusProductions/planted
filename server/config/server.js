@@ -3,16 +3,21 @@ const { ApolloServer, gql, AuthenticationError } = require('apollo-server');
 const fs = require('fs');
 const resolvers = require('../resolvers');
 const jwt = require('jsonwebtoken');
+const btoa = require("btoa");
 
 const schema = fs.readFileSync('./config/schema.graphql');
 const typeDefs = gql`
   ${schema}
 `;
+const claims = {
+  key: 'hVFkk965BuUv'
+};
+
+const token = jwt.sign(claims, process.env.SECRET_KEY, { algorithm: 'HS256' });
 
 const context = ({ req, res }) => {
-  const token = req.headers.authorization || '';
   const currentUser = jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
-    const whitelist = ['authGoogle', 'IntrospectionQuery', 'plantTypes', 'plantType'];
+    const whitelist = ['authGoogle', 'IntrospectionQuery', 'plantTypes', 'plantType'];  
     let isWhitelisted = req.body.query === '';
     if (!isWhitelisted) {
       for (let i in whitelist) {

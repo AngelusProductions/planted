@@ -29,6 +29,7 @@
     "apollo-cache-inmemory": "^1.6.3",
     "apollo-link-http": "^1.5.16",
     "apollo-server": "^2.4.8",
+    "btoa": "^1.2.1",
     "csv-parse": "^4.6.3",
     "dotenv": "^6.2.0",
     "fs": "^0.0.1-security",
@@ -41,10 +42,10 @@
     "papaparse": "^5.1.0",
     "passport": "^0.4.0",
     "passport-google-token": "^0.1.2",
-    "pg": "^7.11.0",
+    "pg": "^8.11.1",
     "querystring": "^0.2.0",
-    "sequelize": "^4.42.1",
-    "sequelize-cli": "^5.5.1"
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "6.2.0"
   },
   "devDependencies": {
     "apollo-server-testing": "^2.4.8",

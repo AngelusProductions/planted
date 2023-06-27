@@ -1,20 +1,26 @@
 {
   "development": {
-    "database": "apprentice_graphql_development",
+    "database": "planted",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false
+    "logging": true,
+    "seederStorage": "sequelize",
+    "seederStoragePath": "seeders",
+    "username": "postgres",
+    "password": "0000"
   },
   "test": {
-    "database": "apprentice_graphql_test",
+    "database": "planted",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false,
-    "operatorsAliases": false
+    "seederStorage": "sequelize",
+    "seederStoragePath": "seeders",
+    "username": "postgres",
+    "password": "0000"
   },
   "production": {
     "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   }
 }
