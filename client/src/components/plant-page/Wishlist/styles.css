@@ -1,5 +1,7 @@
 .exit {
   border: none;
+  background: none;
+  transform: scale(1.5);
 }
 
 .exit:hover {

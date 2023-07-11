@@ -26,6 +26,7 @@ const Explore = () => {
 
   const checkIfSelected = filter => activeFilters.includes(filter);
   const onFilterClick = e => {
+    debugger;
     const filterId =
       e.target.id === '' ? e.target.parentElement.id : e.target.id;
     checkIfSelected(filterId)

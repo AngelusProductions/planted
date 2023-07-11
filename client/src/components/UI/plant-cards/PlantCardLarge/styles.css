@@ -18,6 +18,9 @@
 .plantCardLargePhoto {
   height: 90%;
   margin-bottom: 1rem;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .plantCardLargeLuxLevel {
